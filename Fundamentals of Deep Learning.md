@@ -1,7 +1,7 @@
 
 ## 1. Mathematical Foundations
 
-- **[[Scalars, Vectors, Matrices, and Tensors]]**
+- **[Scalars, Vectors, Matrices, and Tensors](Scalars%20Vectors%20Matrices%20and%20Tensors)**
   - **Scalars**:
     - Single numerical values, such as `x = 5`.
   - **Vectors**:
@@ -63,7 +63,7 @@
       Output = 1 if (w · x + b > 0), else 0
       ```
 
-- **[[Activation Functions]]**
+- **[Activation Functions](Activation%20Functions)**
   - **Sigmoid**:
     - Maps inputs to the range (0, 1). Formula:
       ```
@@ -90,3 +90,5 @@
     - Each layer applies weighted connections, biases, and activation functions.
   - **Applications**:
     - Used in tasks like image classification, regression, and feature extraction.
+
+ [Back](README)
