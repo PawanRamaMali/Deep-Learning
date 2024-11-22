@@ -1,6 +1,6 @@
 
 
-## 1. [[Fundamentals of Deep Learning]]
+## 1. [[Fundamentals of Deep Learning]](Fundamentals of Deep Learning.md)
 
 - **Mathematical Foundations**
   - Scalars, vectors, matrices, and tensors
