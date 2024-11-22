@@ -151,3 +151,4 @@ $f(-3) = \max(0, -3) = 0,\ f(2) = \max(0, 2) = 2$
 
 Activation functions play a pivotal role in deep learning by introducing non-linear properties, enabling the network to model complex relationships in data. Selection of the appropriate activation function depends on the problem domain and architecture.
 
+ [Back](README)
