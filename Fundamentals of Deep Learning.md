@@ -91,4 +91,4 @@
   - **Applications**:
     - Used in tasks like image classification, regression, and feature extraction.
 
- [Back](README)
+ [Back](/)
