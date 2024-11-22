@@ -11,7 +11,7 @@
   - Activation functions: Sigmoid, ReLU, tanh, and step functions
   - Basics of feedforward neural networks
 
-## 2. [[Linear and Logistic Regression]]
+## 2. [Linear and Logistic Regression](Linear%20and%20Logistic%20Regression.md)
 
 - **Linear Regression**
   - Concepts: dependent and independent variables
@@ -23,7 +23,7 @@
   - Practical examples: classification using the Iris dataset
   - Comparison of odds and probabilities
 
-## 3. [[Neural Networks and Training]]
+## 3. [Neural Networks and Training](Neural%20Networks%20and%20Training.md)
 
 - **Deep Neural Networks**
   - Structure of DNN: input, hidden, and output layers
@@ -34,7 +34,7 @@
   - Optimization algorithms: Stochastic Gradient Descent (SGD), Adam, RMSProp
   - Mini-batch gradient descent and its advantages
 
-## 4. [[Backpropagation]]
+## 4. [Backpropagation](Backpropagation.md)
 
 - **Fundamentals of Backpropagation**
   - Forward pass to compute output
@@ -45,7 +45,7 @@
   - Backpropagation through time (BPTT) for recurrent networks
   - Examples: gradient calculation and error minimization in small networks
 
-## 5. [[Convolutional Neural Networks (CNNs)]]
+## 5. [Convolutional Neural Networks (CNNs)](Convolutional%20Neural%20Networks%20(CNNs).md)
 
 - **Introduction to CNNs**
   - Components: convolutional layers, pooling layers, and fully connected layers
@@ -57,7 +57,7 @@
   - Backpropagation for weight updates in convolutional layers
   - Shared weights and localized feature extraction
 
-## 6. [[Recurrent Neural Networks (RNNs)]]
+## 6. [Recurrent Neural Networks (RNNs)](Recurrent%20Neural%20Networks%20(RNNs).md)
 
 - **Basics of RNNs**
   - Sequential data modeling using RNNs
@@ -69,7 +69,7 @@
   - Addressing vanishing gradients in RNNs
   - Backpropagation through time (BPTT) for sequence-based tasks
 
-## 7. [[Generative Models]]
+## 7. [Generative Models](Generative%20Models.md)
 
 - **Generative Adversarial Networks (GANs)**
   - Architecture: generator and discriminator interaction
@@ -79,7 +79,7 @@
   - Stability issues in GAN training
   - Techniques to balance generator and discriminator improvements
 
-## 8. [[Autoencoders]]
+## 8. [Autoencoders](Autoencoders.md)
 
 - **Encoder-Decoder Architecture**
   - Compression and reconstruction using autoencoders
@@ -88,7 +88,7 @@
   - Variational Autoencoders (VAE) for probabilistic modeling
   - Use cases in anomaly detection and generative tasks
 
-## 9. [[Performance Evaluation]]
+## 9. [Performance Evaluation](Performance%20Evaluation.md)
 
 - **Evaluation Metrics**
   - Accuracy, precision, recall, and F1-score
@@ -98,7 +98,7 @@
   - Methods for comparing predictive capabilities of models
   - Limitations of specific metrics like accuracy in imbalanced datasets
 
-## 10. [[Advanced Topics in Deep Learning]]
+## 10. [Advanced Topics in Deep Learning](Advanced%20Topics%20in%20Deep%20Learning.md)
 
 - **Transfer Learning**
   - Leveraging pre-trained models for specific tasks
