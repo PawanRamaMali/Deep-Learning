@@ -1,0 +1,27 @@
+# Mathematical Foundations {#sec-math}
+
+## Introduction to Mathematical Concepts
+
+Deep learning relies heavily on mathematical structures to represent and process data. In this chapter, we'll explore the fundamental mathematical concepts needed for understanding deep learning algorithms.
+
+## Scalars, Vectors, and Matrices
+
+### Scalars
+A scalar is a single numerical value. In deep learning, we often use scalars for:
+
+- Learning rates
+- Loss values
+- Threshold values
+
+### Vectors
+Let's create and manipulate vectors in both Python and R:
+
+::: {.panel-tabset}
+## Python
+```{python}
+import numpy as np
+
+# Create a vector
+v = np.array([1, 2, 3])
+print("Vector:", v)
+print("Shape:", v.shape)
