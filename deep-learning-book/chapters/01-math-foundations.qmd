@@ -1,27 +1,179 @@
-# Mathematical Foundations {#sec-math}
 
-## Introduction to Mathematical Concepts
+# Chapter 1: Fundamentals of Deep Learning {#sec-math}
 
-Deep learning relies heavily on mathematical structures to represent and process data. In this chapter, we'll explore the fundamental mathematical concepts needed for understanding deep learning algorithms.
+## 1.1 Introduction
 
-## Scalars, Vectors, and Matrices
+Deep learning, a subset of machine learning, leverages neural networks with multiple layers to extract patterns and relationships from complex data. This technology powers many modern applications, such as facial recognition, autonomous vehicles, and voice assistants. The foundation of deep learning lies in its ability to model high-dimensional, non-linear relationships by combining mathematical concepts and computational techniques.
 
-### Scalars
-A scalar is a single numerical value. In deep learning, we often use scalars for:
+In this chapter, we will explore:
+- The mathematical foundations of deep learning.
+- Basic neural network structures.
+- The role of activation functions and optimization techniques.
 
-- Learning rates
-- Loss values
-- Threshold values
+## 1.2 Mathematical Foundations
 
-### Vectors
-Let's create and manipulate vectors in both Python and R:
+### Scalars, Vectors, Matrices, and Tensors
 
-::: {.panel-tabset}
-## Python
-```{python}
-import numpy as np
+1. **Scalars**: Single numerical values, such as \( x = 5 \). Scalars represent single data points like a temperature reading.
+2. **Vectors**: One-dimensional arrays, such as \( \mathbf{x} = [x_1, x_2, x_3] \), representing features or data points. For example, a vector can represent exam scores in different subjects.
+3. **Matrices**: Two-dimensional arrays, such as:
+   \[
+   A = \begin{bmatrix}
+   a_{11} & a_{12} \\
+   a_{21} & a_{22}
+   \end{bmatrix}
+   \]
+   Matrices represent relationships between data points and features, such as a dataset where rows are samples and columns are features.
+4. **Tensors**: Generalizations of matrices to higher dimensions, used for multi-dimensional data like images (3D tensors) or video sequences (4D tensors).
 
-# Create a vector
-v = np.array([1, 2, 3])
-print("Vector:", v)
-print("Shape:", v.shape)
+### Key Operations
+
+#### Matrix Transpose
+
+The transpose operation flips a matrix over its diagonal:
+\[
+A^T = \begin{bmatrix}
+a_{11} & a_{21} \\
+a_{12} & a_{22}
+\end{bmatrix}
+\]
+
+#### Dot Product
+
+The dot product calculates the scalar product of two vectors:
+\[
+\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_i b_i
+\]
+
+This operation is fundamental for computing weighted sums in neural networks.
+
+#### Matrix Multiplication
+
+Matrix multiplication combines two matrices \( A \) and \( B \):
+\[
+C = A \cdot B
+\]
+
+Matrix multiplication is essential in transforming data as it flows through neural networks.
+
+---
+
+### Vector Spaces and Properties
+
+Vector spaces provide a mathematical framework for linear combinations of vectors. A vector space must satisfy the following properties:
+1. Closure under addition.
+2. Closure under scalar multiplication.
+3. Contains a zero vector.
+
+Example: In a vector space of exam scores, any weighted combination of scores (e.g., 50% weight to math and 50% to science) remains within the space.
+
+---
+
+## 1.3 Neural Networks: The Building Blocks
+
+### Perceptron
+
+The perceptron is the simplest neural unit, combining input features, weights, and a bias to make decisions:
+\[
+y = \sigma(\mathbf{w} \cdot \mathbf{x} + b)
+\]
+
+Where:
+- \( \mathbf{w} \): Weights representing feature importance.
+- \( \mathbf{x} \): Input vector.
+- \( b \): Bias term, adjusting the decision boundary.
+- \( \sigma \): Activation function.
+
+#### Example: College Admission Decision
+- Features: GPA, test scores, extracurricular activities.
+- Weights: Importance assigned to each feature.
+- Output: "Admit" (1) or "Reject" (0).
+
+### Feedforward Neural Networks
+
+A feedforward network generalizes the perceptron by adding multiple layers of neurons:
+1. **Input Layer**: Represents raw data features.
+2. **Hidden Layers**: Perform transformations to extract features.
+3. **Output Layer**: Maps the features to predictions.
+
+Each layer applies:
+\[
+\mathbf{h}^{(l)} = \sigma(\mathbf{W}^{(l)} \mathbf{h}^{(l-1)} + \mathbf{b}^{(l)})
+\]
+
+Where:
+- \( \mathbf{W}^{(l)} \): Weight matrix for layer \( l \).
+- \( \mathbf{h}^{(l)} \): Activations of layer \( l \).
+- \( \mathbf{b}^{(l)} \): Bias vector for layer \( l \).
+
+---
+
+## 1.4 Activation Functions
+
+Activation functions introduce non-linearity into neural networks, enabling them to model complex relationships.
+
+### Common Activation Functions
+
+1. **Sigmoid**
+   \[
+   \sigma(x) = \frac{1}{1 + e^{-x}}
+   \]
+   - **Range**: \( (0, 1) \)
+   - **Use Case**: Binary classification.
+   - **Limitation**: Suffers from vanishing gradients.
+
+2. **ReLU**
+   \[
+   \text{ReLU}(x) = \max(0, x)
+   \]
+   - **Range**: \( [0, \infty) \)
+   - **Use Case**: Hidden layers.
+   - **Limitation**: Dying ReLU problem.
+
+3. **Softmax**
+   \[
+   \text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+   \]
+   - **Range**: \( (0, 1) \), ensuring outputs sum to 1.
+   - **Use Case**: Multi-class classification.
+
+| Activation Function | Formula                  | Use Case                    |
+|----------------------|--------------------------|-----------------------------|
+| Sigmoid              | \( \frac{1}{1 + e^{-x}} \) | Binary classification        |
+| ReLU                 | \( \max(0, x) \)         | Most hidden layers          |
+| Softmax              | \( \frac{e^{x_i}}{\sum e^{x_j}} \) | Multi-class classification |
+
+---
+
+## 1.5 Optimization Techniques
+
+Deep learning models are trained by minimizing a loss function using optimization algorithms.
+
+### Gradient Descent
+
+The goal of gradient descent is to minimize the loss function \( \mathcal{L} \) by iteratively updating model parameters:
+\[
+\theta_{\text{new}} = \theta_{\text{old}} - \eta \nabla \mathcal{L}
+\]
+Where:
+- \( \theta \): Model parameters (weights and biases).
+- \( \eta \): Learning rate, controlling the step size.
+- \( \nabla \mathcal{L} \): Gradient of the loss function.
+
+---
+
+## 1.6 Applications of Fundamentals
+
+### Image Classification
+
+A feedforward network processes pixel values to classify images. For example, a network might identify whether an image contains a cat or dog based on pixel patterns.
+
+### Regression
+
+Regression tasks use linear or logistic regression models as precursors to deep learning. For instance, predicting house prices based on size and location is a classic regression problem.
+
+---
+
+## 1.7 Conclusion
+
+This chapter introduced the mathematical and architectural foundations of deep learning, focusing on how data is represented and processed through neural networks. These concepts provide the basis for advanced architectures and applications explored in subsequent chapters.
