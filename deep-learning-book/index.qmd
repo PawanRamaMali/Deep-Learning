@@ -76,7 +76,7 @@ Let's begin this exciting exploration of deep learning together.
 ::: {.signature}
 Pawan Rama Mali  \
 Research Scholar  \
-Department of Computer Science and Engineering \ 
+Department of Computer Science and Engineering \
 Indian Institute of Technology Dharwad  \
 December 17, 2024 \
 :::
