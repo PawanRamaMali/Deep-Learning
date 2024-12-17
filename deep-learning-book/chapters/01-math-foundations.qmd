@@ -57,6 +57,13 @@ $$
 \text{decision} = f(\mathbf{w}^T\mathbf{x} + b)
 $$
 
+The equation components are:
+
+$\mathbf{w}$ and $\mathbf{x}$ are vectors (hence bold using \mathbf)
+$\text{decision}$ uses \text for proper text formatting in math mode
+$f$ is the activation function
+$b$ is the bias term
+$T$ denotes transpose
 
 ![Basic structure of a perceptron](images/basic-perceptron.svg)
 
