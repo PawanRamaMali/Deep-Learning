@@ -9,6 +9,20 @@ book:
   chapters:
     - index.qmd
     - chapters/01-math-foundations.qmd
+    - chapters/02-linear-and-logistic-regression.qmd
+    - chapters/03-neural-networks.qmd
+    - chapters/04-convolutional-and-recurrent-nets.qmd
+    - chapters/05-deep-learning-algorithms.qmd
+    - chapters/06-unsupervised-learning.qmd
+    - chapters/07-reinforcement-learning.qmd
+    - chapters/08-generative-adversarial-networks.qmd
+    - chapters/09-transfer-learning.qmd
+    - chapters/10-deep-learning-in-production.qmd
+    - chapters/11-advanced-topics-in-deep-learning.qmd
+    - chapters/12-deep-learning-with-python-and-tensorflow.qmd
+    - chapters/13-advanced-topics-in-deep-learning.qmd
+    - chapters/14-deep-learning-with-julia-and-knet.qmd
+    - chapters/15-advanced-topics-in-deep-learning.qmd
   
 format:
   html:
